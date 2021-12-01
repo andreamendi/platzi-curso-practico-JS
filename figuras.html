@@ -7,7 +7,30 @@
   <title>Figuras geométricas | Curso Práctico de JS en Platz1</title>
 </head>
 <body>
-  <h1>Figuras geométricas</h1>
+  <header>
+    <h1>Conoce los números en las figuras geométricas</h1>
+    <p>
+      Existen muchos datos que podemos conocer de las <black>figuras geométricas</black>, ahora vamos a ver el perímetro y área.
+    </p>
+    <small>Este es el primer taller del curso práctico de JavaScript</small>
+  </header>
+
+  <section>
+    <h2>Medidas del cuadrado</h2>
+    <h3>Área y perímetro</h3>
+    <form action="form">
+      <label for="InputCuadrado">Escribe cuanto mide cada lado de tu cuadrado:</label>
+      <input id="InputCuadrado" type="number" >
+      <button type="button" onclick="activarPerimetroCuadrado()">Encuentra el perímetro</button>
+      <button type="button" onclick="activarAreaCuadrado()">Descubre el área</button>
+      <div style="width: 50%;">
+        <h2>El resultado es:</h2>
+        <hr>
+        <b id="resultadoCuadrado"></b>
+        <hr>
+      </div>
+    </form>
+  </section>
 </body>
 <script src="./figuras.js"></script>
 </html>

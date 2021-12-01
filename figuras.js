@@ -78,3 +78,76 @@ function areaCirculo (radio){
 
 
 console.groupEnd();
+
+
+
+
+
+
+// Empieza la interacción con el HTML
+
+
+// Cuadrado
+function activarPerimetroCuadrado (){
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const perimetro = perimetroCuadrado(value);
+  const res = document.getElementById("resultadoCuadrado").innerHTML = `¡Genial!, el perímetro de tu cuadrado es ${perimetro}cm^2`;
+  return res;
+    
+  // alert(`¡Genial!, el perímetro de tu cuadrado es ${perimetro}cm`);
+};
+
+function activarAreaCuadrado(){
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const area = areaCuadrado(value);
+  const res = document.getElementById("resultadoCuadrado").innerHTML = `¡Genial!, el área de tu cuadrado es ${area}cm^2`;
+  return res;
+  // alert(`¡Genial!, el área de tu cuadrado es ${area}cm^2`);             
+};
+
+
+// // Tríangulo Isósceles
+// function activarPerimetroCuadrado (){
+//   const input = document.getElementById("InputCuadrado");
+//   const value = input.value;
+
+//   const perimetro = perimetroCuadrado(value);
+//   alert(`¡Genial!, el perímetro de tu cuadrado es ${perimetro}cm`);
+// };
+
+// function activarAreaCuadrado(){
+//   const input = document.getElementById("InputCuadrado");
+//   const value = input.value;
+
+//   const area = areaCuadrado(value);
+//   return  document.getElementById("resultadoCuadrado").innerHTML = `¡Genial!, el área de tu cuadrado es ${area}cm^2`;
+
+//   //alert(`¡Genial!, el área de tu cuadrado es ${area}cm^2`);             
+// };
+
+
+// console.group('Triángulos');
+// const ladoTriangulo1 = 5;
+// const ladoTriangulo2 = 5;
+// const baseTriangulo = 3;
+// console.log(`Los lados del triángulo miden: ${ladoTriangulo1} cm, ${ladoTriangulo2} cm y la base ${baseTriangulo} cm`);
+
+// // const alturaTriangulo = 6.5;
+// // console.log(`La altura del triángulo es: ${alturaTriangulo} cm`); 
+
+// function perimetroTriangulo (lado1, lado2, base) {
+//   return lado1 + lado2 + base;
+// };
+// // console.log(`El perímetro del triángulo es: ${perimetroTriangulo} cm`);
+
+
+// function areaTriangulo (base, altura){
+//   return (base * altura) / 2;
+// };
+
+// console.groupEnd();
+
