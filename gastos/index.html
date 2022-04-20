@@ -75,37 +75,19 @@
                     />
               </div>
               <div class="col-auto">
-                <button type="button" class="btn btn-primary mb-3">Enviar mi ingreso</button>
+                <button type="button" class="btn btn-primary mb-3" onclick="activarSepararPorCategorias()">Enviar mi ingreso</button>
               </div>
             </div>
-
-            <!-- <button
-              type="button"
-              class="btn btn-primary"
-              onclick="activarPerimetroCuadrado()"
-            >
-              Encuentra el perímetro
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="activarAreaCuadrado()"
-            >
-              Descubre el área
-            </button> -->
           </div>
-          <!-- <div style="width: 90%">
-            <div class="card-body">
-              <h5 class="card-title">El resultado es:</h5>
-              <h6 class="card-subtitle mb-2 text-muted" id="resultadoCuadrado">
-                Aquí aparecerá tu resultado pronto
-              </h6>
-            </div>
-          </div> -->
         </div>
       </form>
     </section>
 
+    <section>
+      <div class="margenTop" id="alertaCategorias">
+            
+      </div>
+    </section>
 
     <!-- Categorías -->
     <section class="margenTop">
@@ -120,7 +102,7 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; margin-bottom: 10px; color:#6C91C2">
-                  <div class="card-header" id="input_viviendaPorcentaje" >
+                  <div class="card-header" >
                     <h3>Vivienda &#127969</h3>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -139,7 +121,7 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#43B929">
-                  <div class="card-header" id="input_alimentacionPorcentaje" >
+                  <div class="card-header">
                     <h3>Alimentación &#127790</h3>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -158,7 +140,7 @@
               
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#A29F15">
-                  <div class="card-header" id="input_transportePorcentaje" >
+                  <div class="card-header">
                     <h3>Transporte &#128663</h3>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -177,7 +159,7 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#F3B61F">
-                  <div class="card-header" id="input_serviciosPorcentaje" >
+                  <div class="card-header">
                     <h3>Servicios &#127760</h3>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -196,7 +178,7 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#FF6201">
-                  <div class="card-header" id="input_gastosPersonalesPorcentaje" >
+                  <div class="card-header" >
                     <h4>Gastos Personales &#128081</h4>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -215,7 +197,7 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#EE2677">
-                  <div class="card-header" id="input_entrenimientoPorcentaje" >
+                  <div class="card-header">
                     <h3>Entretenimiento &#127905</h3>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -234,13 +216,13 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#0EAD69">
-                  <div class="card-header" id="input_alimentacionPorcentaje" >
+                  <div class="card-header">
                     <h3>Salud &#128657</h3>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item"><input
                       placeholder="5-10%"
-                      id="input_alimentacionPorcentaje"
+                      id="input_saludPorcentaje"
                       type="number"
                       type="number"
                       class="form-control"
@@ -253,13 +235,13 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#E86252">
-                  <div class="card-header" id="input_alimentacionPorcentaje" >
+                  <div class="card-header">
                     <h3>Ropa &#128086</h3>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item"><input
                       placeholder="2-7%"
-                      id="input_alimentacionPorcentaje"
+                      id="input_ropaPorcentaje"
                       type="number"
                       type="number"
                       class="form-control"
@@ -272,13 +254,13 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#3D5467">
-                  <div class="card-header" id="input_alimentacionPorcentaje" >
+                  <div class="card-header">
                     <h3>Educación &#128421</h3>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item"><input
                       placeholder="7-10%"
-                      id="input_alimentacionPorcentaje"
+                      id="input_educacionPorcentaje"
                       type="number"
                       type="number"
                       class="form-control"
@@ -291,13 +273,13 @@
 
               <div class="col">
                 <div class="card" style="width: 18rem; margin-bottom: 10px; color:#A72608">
-                  <div class="card-header" id="input_alimentacionPorcentaje" >
+                  <div class="card-header">
                     <h3>Inversión / Ahorro &#128185</h3>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item"><input
                       placeholder="10-20%"
-                      id="input_alimentacionPorcentaje"
+                      id="input_inversionPorcentaje"
                       type="number"
                       type="number"
                       class="form-control"
@@ -311,11 +293,10 @@
             </div>
             <small><i style="color: darkgrey;">Los porcentajes sugeridos son para personas solteras.</i></small>
             <div>
-
               <button
               type="button"
               class="btn btn-primary"
-              onclick="activarDiametroCirculo()"
+              onclick="capturarPorcentajesCategorias()"
               >
               Encontrar cuánto de tengo que poner a cada categoría
             </button>
@@ -349,7 +330,7 @@
     </section>
 
     <!-- Triángulo -->
-    <section class="margenTop">
+    <!-- <section class="margenTop">
       <form action="form">
         <div class="card">
           <div class="card-header">
@@ -442,9 +423,9 @@
           </div>
         </div>
       </form>
-    </section>
+    </section> -->
   </body>
-  <script src="./figuras.js"></script>
+  <script src="./analisis.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
