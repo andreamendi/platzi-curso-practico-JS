@@ -58,20 +58,22 @@ const salaryMexSorted = salaryMex.sort(
 ); 
 
 
-// Mediana top 10%
-(p  * (90))
+// Mediana top 10% 
+
+// Función para calcular el porcentaje antes.
+// (p  * 90) / 100
+
 const spliceStart = (salaryMexSorted.length * 90) / 100;
 const spliceCount = salaryMexSorted.length - spliceStart;
 
+const salariosMexTop10 = salaryMexSorted.splice(spliceStart, spliceCount)
+// El métoso "Splice" recibe dos argumentos. La primera posición es dónde queremos hacer el corte. Y el segundo argumento indíca cuántos pedazos queremos que salgan, es el resto de elementos desde donde se corta, hasta el final.
 
-const salariosMexTop10 = salaryMexSorted.splice(spliceStart, )
-// El métoso "Splice" recibe dos argumentos. La primera posición es dónde queremos hacer el corte. Cuántos pedazos queremos que salgan. 
-
+const medianaTop10Mex= medianaSalarios(salariosMexTop10)
 
 
 const medianaGeneralMex= medianaSalarios(salaryMex)
 console.log({
   medianaGeneralMex,
   medianaTop10Mex
-}
-)
+});
